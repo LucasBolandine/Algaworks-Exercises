@@ -4,26 +4,26 @@ public class BMICalculator {
     Bmi calculateBmi(Patient patient) {         // Passando o objeto Patient como parâmetro.
         Bmi bmi = new Bmi();                    // instanciado um objeto Bmi e referenciado na variavel bmi do tipo Bmi
 
-        bmi.namePatient = patient.name;
-        bmi.weight = patient.weight;
-        bmi.height = patient.height;
-        bmi.bmiResult = patient.weight / (patient.height * patient.height);
+        Bmi.namePatient = patient.name;
+        Bmi.weight = patient.weight;
+        Bmi.height = patient.height;
+        Bmi.bmiResult = patient.weight / (patient.height * patient.height);
 
-        if (bmi.bmiResult < 18.5) {
-            bmi.classification = "MAGREZA";
-            bmi.degreeObesity = 0;
-        } else if (bmi.bmiResult <= 24.9) {
-            bmi.classification = "NORMAL";
-            bmi.degreeObesity = 0;
-        } else if (bmi.bmiResult <= 29.9) {
-            bmi.classification = "SOBREPESO";
-            bmi.degreeObesity = 1;
-        } else if (bmi.bmiResult <= 39.9) {
-            bmi.classification = "OBESIDADE";
-            bmi.degreeObesity = 2;
+        if (Bmi.bmiResult < 18.5) {
+            Bmi.classification = "MAGREZA";
+            Bmi.degreeObesity = 0;
+        } else if (Bmi.bmiResult <= 24.9) {
+            Bmi.classification = "NORMAL";
+            Bmi.degreeObesity = 0;
+        } else if (Bmi.bmiResult <= 29.9) {
+            Bmi.classification = "SOBREPESO";
+            Bmi.degreeObesity = 1;
+        } else if (Bmi.bmiResult <= 39.9) {
+            Bmi.classification = "OBESIDADE";
+            Bmi.degreeObesity = 2;
         } else {
-            bmi.classification = "OBESIDADE GRAVE";
-            bmi.degreeObesity = 3;
+            Bmi.classification = "OBESIDADE GRAVE";
+            Bmi.degreeObesity = 3;
         }
 
         return bmi;
